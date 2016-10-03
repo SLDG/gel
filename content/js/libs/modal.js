@@ -29,7 +29,7 @@ if(!!mv){
       mClose = getId('modal_close'),
       modal = getId('modal_holder'),
       mVOverlay = getId('modal_video_window'),
-      mVOpen = document.querySelector('.btn[title="Discover the Digital Guidelines"]'),
+      mVOpen = document.querySelector('.btn[title="Discover the Digital Hub"]'),
       mVClose = getId('modal_video_close'),
       modalV = getId('modal_video_holder'),
       allNodes = document.querySelectorAll("*"),
@@ -52,7 +52,7 @@ if(!!mv){
     event.preventDefault();
     event.stopPropagation();
     lastFocus = document.activeElement;
-      
+
     if(event.target.className.indexOf('search-link') < 0){
         currOverlay = mVOverlay;
         currModal = modalV;
@@ -63,7 +63,7 @@ if(!!mv){
     currModal.setAttribute('tabindex', '0');
     currModal.querySelector(focusableEl).focus();
   }
-    
+
 
 
   // binds to both the button click and the escape key to close the modal window
@@ -72,7 +72,7 @@ if(!!mv){
       var currOverlay = mOverlay,
           currModal = modal,
           focusableEl = 'input';
-      
+
     if (!!modalOpen && ( !event.keyCode || event.keyCode === 27) ) {
         if(modalOpen === 'video'){
 
@@ -118,11 +118,11 @@ if(!!mv){
 
   // open modal by btn click/hit
   mOpen.addEventListener('click', modalShow);
-    
+
 if(!!mv){
   mVOpen.addEventListener('click', modalShow);
 }
-    
+
   // close modal by btn click/hit
   mClose.addEventListener('click', modalClose);
 
